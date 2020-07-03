@@ -5,7 +5,7 @@
 //Parámetros de entrada y salida: valor máximo y mínimo
 //################################################################################
 
-Funcion CalcularMaxMin(vector,size,max,min)
+Funcion CalcularMaxMin(vector,size,max Por Referencia,min Por Referencia)
 	Definir i como Entero;
 	max<-vector[0];
 	min<-vector[0];
@@ -26,6 +26,7 @@ FinFuncion
 //################################################################################
 
 Proceso MaxMin
+
 	Definir lista Como Entero;
 	Dimension lista[10];
 	Definir size_lista,i Como Entero;
@@ -34,9 +35,11 @@ Proceso MaxMin
 	//Incializo el vector con valores aleatorios
 	Para i<-0 hasta size_lista-1 Hacer
 		lista[i]<-Aleatorio(1,100);
+		Escribir Sin Saltar " ",lista[i];
 	FinPara
 	//En la llamada le paso las variables vmax y vmin que se van a modificar en el procedimiento
 	CalcularMaxMin(lista,size_lista,vmax,vmin);
+	Escribir " ";
 	Escribir "El valor máximo es ",vmax;
 	Escribir "El valor mínimo es ",vmin;
 FinProceso
